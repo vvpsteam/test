@@ -50,7 +50,7 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 500px;
-  background-color: #777;
+  background-color: #f0f0f0;
 }
 .carousel-inner > .item > img {
   position: absolute;
@@ -125,10 +125,28 @@ body {
   .featurette-heading {
     font-size: 50px;
   }
+  .sed-bg1{ background: url(../img/768.png) no-repeat; height: 500px; width: 768px; }
+  .sed-bg2{ background: url(../img/768.png) no-repeat; height: 500px; width: 768px; }
+  .sed-bg3{ background: url(../img/768.png) no-repeat; height: 500px; width: 768px; }
+
 }
 
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
   }
+  .sed-bg1{ background: url(../img/992.png) no-repeat; height: 500px; width: 992px; }
+  .sed-bg2{ background: url(../img/992.png) no-repeat; height: 500px; width: 992px; }
+  .sed-bg3{ background: url(../img/992.png) no-repeat; height: 500px; width: 992px; }
+
+}
+
+@media (min-width: 1200px){
+  .sed-bg1{ background: url(../img/1200.png) no-repeat; height: 500px; width: 1200px; }
+  .sed-bg2{ background: url(../img/1200.png) no-repeat; height: 500px; width: 1200px; }
+  .sed-bg3{ background: url(../img/1200.png) no-repeat; height: 500px; width: 1200px; }
+}
+
+.carousel-control.left,.carousel-control.right{ 
+    background-image:none; background-repeat:no-repeat; 
 }
