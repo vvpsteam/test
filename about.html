@@ -11,11 +11,10 @@
 
     <title>流程仿真编辑器</title>
 
-    <script src="threejs/build/three.js" type="text/javascript" ></script> 
-       <script src="threejs/js/libs/tween.min.js"></script>
-       <script src="threejs/js/controls/OrbitControls.js"></script>
-       <script src="threejs/js/Detector.js"></script>
-     
+    <script src="threejs/build/three.js" type="text/javascript" ></script>  
+    <script src="threejs/js/controls/DragControls.js"></script>
+    <script src="threejs/js/controls/TrackballControls.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -132,172 +131,126 @@
      var loader = new THREE.FontLoader();
     //导入字体，设定字体
         loader.load('threejs/helvetiker_bold.typeface.json',function(font){
-            init(font);
-            // render();
+            init(font); 
         });
      
     if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+var container, stats;
+      var camera, controls, scene, renderer;
+      var objects = [];
+ 
+      animate();
 
-            var renderer = new THREE.WebGLRenderer();
+      function init(font) {
 
-            var camera = new THREE.PerspectiveCamera( 35, 1, 1, 2000 );
+        container = document.getElementById('3d' );
+        document.body.appendChild( container );
 
-            var controls = new THREE.OrbitControls( camera, renderer.domElement );
+        camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 );
+        camera.position.z = 1000;
 
-            var scene = new THREE.Scene();
+        controls = new THREE.TrackballControls( camera );
+        controls.rotateSpeed = 1.0;
+        controls.zoomSpeed = 1.2;
+        controls.panSpeed = 0.8;
+        controls.noZoom = false;
+        controls.noPan = false;
+        controls.staticMoving = true;
+        controls.dynamicDampingFactor = 0.3;
 
-            var matFloor = new THREE.MeshPhongMaterial();
-            var matBox = new THREE.MeshPhongMaterial( { color: 0xaaaaaa } );
+        scene = new THREE.Scene();
 
-            var geoFloor = new THREE.BoxGeometry( 2000, 1, 2000 );
-            var geoBox = new THREE.BoxGeometry( 3, 1, 2 );
+        scene.add( new THREE.AmbientLight( 0x505050 ) );
 
-            var mshFloor = new THREE.Mesh( geoFloor, matFloor );
-            var mshBox = new THREE.Mesh( geoBox, matBox );
+        var light = new THREE.SpotLight( 0xffffff, 1.5 );
+        light.position.set( 0, 500, 2000 );
+        light.castShadow = true;
 
-            var ambient = new THREE.AmbientLight( 0x111111 );
+        light.shadow = new THREE.LightShadow( new THREE.PerspectiveCamera( 50, 1, 200, 10000 ) );
+        light.shadow.bias = - 0.00022;
 
-            var spotLight1 = createSpotlight( 0xFF7F00 );
-            var spotLight2 = createSpotlight( 0x00FF7F );
-            var spotLight3 = createSpotlight( 0x7F00FF );
+        light.shadow.mapSize.width = 2048;
+        light.shadow.mapSize.height = 2048;
 
-            var lightHelper1, lightHelper2, lightHelper3;
-          
-            function init(font) {
+        scene.add( light );
 
-                renderer.shadowMap.enabled = true;
-                renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-                //背景颜色修改一下
-                renderer.setClearColor( 0xf0f0f0 );
-                renderer.gammaInput = true;
-                renderer.gammaOutput = true; 
+        var geometry = new THREE.BoxGeometry( 40, 40, 40 );
 
-                camera.position.set( 46, 22, - 21 );
+        for ( var i = 0; i < 200; i ++ ) {
 
-                spotLight1.position.set( 15, 40, 45 );
-                spotLight2.position.set( 0, 40, 35 );
-                spotLight3.position.set( - 15, 40, 45 );
+          var object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );
 
-                lightHelper1 = new THREE.SpotLightHelper( spotLight1 );
-                lightHelper2 = new THREE.SpotLightHelper( spotLight2 );
-                lightHelper3 = new THREE.SpotLightHelper( spotLight3 );
+          object.position.x = Math.random() * 1000 - 500;
+          object.position.y = Math.random() * 600 - 300;
+          object.position.z = Math.random() * 800 - 400;
 
-                matFloor.color.set( 0x808080 );
+          object.rotation.x = Math.random() * 2 * Math.PI;
+          object.rotation.y = Math.random() * 2 * Math.PI;
+          object.rotation.z = Math.random() * 2 * Math.PI;
 
-                mshFloor.receiveShadow = true;
-                mshFloor.position.set( 0, - 0.05, 0 );
+          object.scale.x = Math.random() * 2 + 1;
+          object.scale.y = Math.random() * 2 + 1;
+          object.scale.z = Math.random() * 2 + 1;
 
-                mshBox.castShadow = true;
-                mshBox.receiveShadow = true;
-                mshBox.position.set( 0, 5, 0 );
+          object.castShadow = true;
+          object.receiveShadow = true;
 
-                // scene.add( mshFloor );
-                 
-                scene.add( ambient );
-                scene.add( spotLight1, spotLight2, spotLight3 );
-                scene.add( lightHelper1, lightHelper2, lightHelper3 );
+          scene.add( object );
 
+          objects.push( object );
 
-                // 文字
-                var text = "VVPS";
+        }
 
-                var g = new THREE.TextGeometry(text,{
-                    // 设定文字字体，
-                    font:font,
-                    //尺寸
-                    size:6,
-                    //厚度
-                    height:4,
-                });
-                //计算边界，暂时不用管
-                g.computeBoundingBox();
-                //3D文字材质
-                var m = new THREE.MeshBasicMaterial({color:0xff0000});
-                var mesh = new THREE.Mesh(g,m); 
-                 
-                // 加入到场景中
-                scene.add(mesh);                
+        renderer = new THREE.WebGLRenderer( { antialias: true } );
+        renderer.setClearColor( 0xf0f0f0 );
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        renderer.sortObjects = false;
 
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFShadowMap;
 
-                document.getElementById('3d').appendChild(renderer.domElement);
-                onResize();
-                window.addEventListener( 'resize', onResize, false );
+        container.appendChild( renderer.domElement );
 
-                controls.target.set( 0, 7, 0 );
-                controls.maxPolarAngle = Math.PI / 2;
-                controls.update();
+        var dragControls = new THREE.DragControls( objects, camera, renderer.domElement );
+        dragControls.addEventListener( 'dragstart', function ( event ) { controls.enabled = false; } );
+        dragControls.addEventListener( 'dragend', function ( event ) { controls.enabled = true; } );
 
-            }
+        
 
-            function createSpotlight( color ) {
+        window.addEventListener( 'resize', onWindowResize, false );
 
-                var newObj = new THREE.SpotLight( color, 2 );
+      }
 
-                newObj.castShadow = true;
-                newObj.angle = 0.3;
-                newObj.penumbra = 0.2;
-                newObj.decay = 2;
-                newObj.distance = 50;
+      function onWindowResize() {
 
-                newObj.shadow.mapSize.width = 1024;
-                newObj.shadow.mapSize.height = 1024;
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
 
-                return newObj;
+        renderer.setSize( window.innerWidth, window.innerHeight );
 
-            }
+      }
 
-            function onResize() {
+      //
 
-                camera.aspect = 1;
-                camera.updateProjectionMatrix();
-                renderer.setSize( 350, 350 );
+      function animate() {
 
-            }
+        requestAnimationFrame( animate );
 
-            function tween( light ) {
+        render();
+        stats.update();
 
-                new TWEEN.Tween( light ).to( {
-                    angle: ( Math.random() * 0.7 ) + 0.1,
-                    penumbra: Math.random() + 1
-                }, Math.random() * 3000 + 2000 )
-                .easing( TWEEN.Easing.Quadratic.Out ).start();
+      }
 
-                new TWEEN.Tween( light.position ).to( {
-                    x: ( Math.random() * 30 ) - 15,
-                    y: ( Math.random() * 10 ) + 15,
-                    z: ( Math.random() * 30 ) - 15
-                }, Math.random() * 3000 + 2000 )
-                .easing( TWEEN.Easing.Quadratic.Out ).start();
+      function render() {
 
-            }
+        controls.update();
 
-            function animate() {
+        renderer.render( scene, camera );
 
-                tween( spotLight1 );
-                tween( spotLight2 );
-                tween( spotLight3 );
+      }
 
-                setTimeout( animate, 5000 );
-
-            }
-
-            function render() {
-
-                TWEEN.update();
-
-                if ( lightHelper1 ) lightHelper1.update();
-                if ( lightHelper2 ) lightHelper2.update();
-                if ( lightHelper3 ) lightHelper3.update();
-
-                renderer.render( scene, camera );
-
-                requestAnimationFrame( render );
-
-            }
-
-            init();
-            render();
-            animate();
+                
     </script>
 
     <script src="assets/jquery/jquery.min.js"></script>
