@@ -44,8 +44,8 @@
     </script> 
   </head>
 <!-- NAVBAR
-================================================== -->
-  <body>
+==================================================  onselectstart="return false">-->
+  <body > 
     <div class="navbar-wrapper">
       <div class="container">
 
@@ -61,11 +61,11 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li> 
-                <li ><a href="download.html">Download</a></li>
-                <li><a href="questions.html">Questions</a></li>               
-                <li class="active"><a href="document.html">Document</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">首页</a></li> 
+                <li ><a href="download.html">下载</a></li>
+                <li><a href="questions.html">常见问题</a></li>               
+                <li class="active"><a href="document.html">文档</a></li>
+                <li><a href="about.html">关于</a></li>
               </ul>
             </div>
           </div>
@@ -314,8 +314,16 @@
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
         
+        <div class="sidebar-module sidebar-module-inset">
+            <h4 style="color: blue;"><b>支付宝打赏</b></h4>
+             
+            <img src="assets/img/count.jpg" alt="">
+             
+             <p> <em>if you like this .....please take your phone...</em>  </p>
+          </div>
+
           <div class="sidebar-module">
-            <h4>操作文档</h4>
+            <h4><b>操作文档</b></h4>
             <ol class="list-unstyled">
               <li><a href="#vv1">· 新建、打开</a></li>
               <li><a href="#vv2">· 多个子流程</a></li>
@@ -342,7 +350,7 @@
             </ol>
           </div>
           <div class="sidebar-module">
-            <h4>视频观看</h4>
+            <h4><b>视频观看</b></h4>
             <ol class="list-unstyled">
               <li><a href="#">· Youku</a></li> 
             </ol>
@@ -357,9 +365,9 @@
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Top</a></p>
+        <p class="pull-right"><a href="#">顶部</a></p>
        <!--  <p>&copy; vvpsteam 2016 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
-        <p>&copy; vvpsteam 2016 </p>
+        <p>&copy; vvpsteam 2017 </p>
       </footer>
 
     </div><!-- /.container -->
@@ -376,12 +384,13 @@
 
     window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')
 
-   
+    document.oncontextmenu=function(e){return false;}
 
     <script src="dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+
   </body>
 </html>
