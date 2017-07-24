@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="assets/favicon.ico">
 
-    <title>流程仿真编辑器</title>
+    <title>VR编辑器</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -54,13 +54,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand"  >VVPS</a>
+              <a class="navbar-brand"  >VR编辑器</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li  class="active"><a href="index.html">首页</a></li>
-                <li ><a href="download.html">下载</a></li>
-                <li><a href="questions.html">常见问题</a></li>
+                <li ><a href="download.html">下载</a></li> 
                 <li><a href="document.html">文档</a></li>
                 <li><a href="about.html">关于</a></li>
 
@@ -77,50 +76,38 @@
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
+      <!-- 
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li> 
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li> 
       </ol>
+       -->
       <div class="carousel-inner" role="listbox">
         <div class="item active"> 
           <div class="container sed-bg1">
-            <div class="carousel-caption">
-              <h1>功能一</h1>
-              <p>功能一基本描述...</p>
+            <div class="carousel-caption">            
+              <!--<h1 style="color:black">功能一</h1>-->            
+              <p style="color:black">适用于流程演示的VR应用</p>
+              <p style="color:black">适用HTC-VIVE</p>
+              <p style="color:black">无需编写代码，编辑后发布</p> 
+              <p style="color:black">开源分享，可扩展</p> 
+              <p style="color:black">VR编辑器适用于Unity3D 5.x</p>
               <p><a class="btn btn-lg btn-primary" mce_href="javascript:" onClick="window.open('http://www.baidu.com','','height=window.innerheight,width=window.innerwidth,scrollbars=yes,status =yes')" role="button" role="button">视频观看</a></p>
+              
             </div>
           </div>
-        </div>
-        <div class="item"> 
-          <div class="container sed-bg2">
-            <div class="carousel-caption">
-              <h1>功能二</h1>
-              <p>功能二基本描述...</p>
-              <p><a class="btn btn-lg btn-primary"  mce_href="javascript:" onClick="window.open('http://www.baidu.com','','height=500,width=611,scrollbars=yes,status =yes')" role="button">视频观看</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item"> 
-          <div class="container sed-bg3">
-            <div class="carousel-caption">
-              <h1>功能三</h1>
-              <p>功能三基本描述...</p>
-              <p><a class="btn btn-lg btn-primary" mce_href="javascript:" onClick="window.open('http://www.baidu.com','','height=500,width=611,scrollbars=yes,status =yes')" role="button" role="button">视频观看</a></p>
-            </div>
-          </div>
-        </div>
+        </div> 
+       
  
 
       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <!-- <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
-      </a>
+      </a> -->
     </div><!-- /.carousel -->
 
 
@@ -134,26 +121,16 @@
       <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">开始 · <span class="text-muted">Begin</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla.<br> Vestibulum id ligula porta felis euismod semper. <br>Praesent commodo cursus magna, vel scelerisque nisl consectetur. <br>Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="assets/img/image1.png" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
+  
       <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
           <h2 class="featurette-heading">编辑 · <span class="text-muted">Edit</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla.<br> Vestibulum id ligula porta felis euismod semper. <br>Praesent commodo cursus magna, vel scelerisque nisl consectetur.<br> Fusce dapibus, tellus ac cursus commodo.</p>
+          <p class="lead">VR编辑器可以编辑多个子系统</p>
+          <p class="lead">单个流程的每一步操作的文字介绍、语音讲解简易编辑</p>
+          <p class="lead">每一步操作对象的UI面板自动生成</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block"  src="assets/img/image1.png" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block"  src="assets/img/edit.png" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -162,10 +139,12 @@
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">动作 · <span class="text-muted">Action</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. <br>Vestibulum id ligula porta felis euismod semper.<br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.<br> Fusce dapibus, tellus ac cursus commodo.</p>
+          <p class="lead">动作（如手柄扳机、触摸键等）下拉选择指定</p>
+          <p class="lead">动作稳定时间设置</p>
+          <p class="lead">手柄、工具指定，工具箱简单设置</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block"  src="assets/img/image1.png" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block"  src="assets/img/action.png" alt="Generic placeholder image">
         </div>
       </div> 
 
@@ -173,50 +152,39 @@
 
       <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">任务 · <span class="text-muted">Task</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla.<br> Vestibulum id ligula porta felis euismod semper. <br>Praesent commodo cursus magna, vel scelerisque nisl consectetur.<br> Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">事件 · <span class="text-muted">Event</span></h2>
+          <p class="lead">每一步被手柄激活后，相关事件发生编辑</p>
+          <p class="lead">物体基本属性变化（移动、旋转、缩放、显示及隐藏）</p>
+          <p class="lead">粒子系统、动画系统及音乐播放等</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block"  src="assets/img/image1.png" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block"  src="assets/img/event.png" alt="Generic placeholder image">
         </div>
       </div>
- 
-      <hr class="featurette-divider">
+  
+    <hr class="featurette-divider">
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">工具 · <span class="text-muted">Tool</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. <br>Vestibulum id ligula porta felis euismod semper.<br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.<br> Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">考评 · <span class="text-muted">Exam</span></h2>
+          <p class="lead">可以针对考评模式下做设置</p>
+          <p class="lead">步骤的时间考评</p>
+          <p class="lead">步骤的考评得分</p>
+          <p class="lead">步骤错误提示</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block"  src="assets/img/image1.png" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-       
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">中断 · <span class="text-muted">Interrupt</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla.<br> Vestibulum id ligula porta felis euismod semper. <br>Praesent commodo cursus magna, vel scelerisque nisl consectetur.<br> Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block"  src="assets/img/image1.png" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block"  src="assets/img/exam.png" alt="Generic placeholder image">
         </div>
       </div> 
- 
       <hr class="featurette-divider">
       <!-- /END THE FEATURETTES -->
 
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">顶部</a></p>
-       <!--  <p>&copy; vvpsteam 2016 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
-        <p>&copy; vvpsteam 2017 </p>
-      </footer>
-
+        <p class="pull-right"><a href="#">顶部</a></p> 
+        <p>&copy; Li Bin 2017 </p>
+      </footer> 
     </div><!-- /.container -->
 
 

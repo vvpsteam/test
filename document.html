@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="assets/favicon.ico">
 
-    <title>流程仿真编辑器</title>
+    <title>VR编辑器</title>
 
     <script src="threejs/build/three.js" type="text/javascript" ></script>   
     <script src="threejs/js/controls/Detector.js"></script>
@@ -57,13 +57,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span> 
               </button>
-              <a class="navbar-brand"  >VVPS</a>
+              <a class="navbar-brand"  >VR编辑器</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li><a href="index.html">首页</a></li> 
-                <li ><a href="download.html">下载</a></li>
-                <li><a href="questions.html">常见问题</a></li>               
+                <li ><a href="download.html">下载</a></li>                               
                 <li class="active"><a href="document.html">文档</a></li>
                 <li><a href="about.html">关于</a></li>
               </ul>
@@ -97,234 +96,146 @@
 
           <div class="blog-post">
             <h2 id="vv1" class="blog-post-title">· 新建、打开</h2>
-             
-
-            <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
-            <hr>
-            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            
             <blockquote>
-              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><strong>必须在vvps编辑器里面新建一个场景, 才可以进行编辑!</strong> </p>
             </blockquote>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <h2>Heading</h2>
-            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-            <h3>Sub-heading</h3>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            <pre><code>Example code block</code></pre>
-            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-            <h3>Sub-heading</h3>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-            <ol>
-              <li>Vestibulum id ligula porta felis euismod semper.</li>
-              <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-              <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-            </ol>
-            <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+            <p> <em>注意：新建场景不会改变场景数据，只是在场景里面增加了2个vvps物体</em><br>一个是____VVPSMain是程序运行入口；<br>一个是____VVPSComponent用来保存编辑后的数据；<br></p>
+           
           </div><!-- /.blog-post -->
 
           <div id = "vv2"class="blog-post">
             <h2  class="blog-post-title">· 多个子流程</h2>
-            
-            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-            <blockquote>
-              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+             <blockquote>
+              <p><strong>一个VR场景可以编辑多个子流程</strong></p>
             </blockquote>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <p>该编辑器主要针对需要严格按照流程执行的VR演示，第一步完成才能进行第二步操作，直到最后一步执行完毕。则该子流程全部执行完毕！
+            <br>但是可以编辑多个子流程，通过用户选择子流程进行操作演示！
+            </p> 
           </div><!-- /.blog-post -->
 
           <div id = "vv3"class="blog-post">
             <h2  class="blog-post-title">· 操作平台</h2>
-             
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+             <blockquote>
+              <p><strong>针对VR平台</strong></p>
+            </blockquote>
+            <p>由于是VR编辑器，目前已经测试通过HTC-VIVE，无桌面鼠标操作！</p>
             <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+              <li>HTC-VIVE</li>
+              <li>Oculus(测试中)</li>
+              <li>LeapMotion(测试中)</li>
+            </ul> 
           </div><!-- /.blog-post -->
 
          <div id = "vv4"class="blog-post">
-            <h2  class="blog-post-title">· 加载UI界面</h2>
-             
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
+            <h2  class="blog-post-title">· UI界面</h2>
+            <blockquote>
+              <p><strong>每个步骤，操作对象的介绍UI面板<br>程序入口的UI界面</strong></p>
+            </blockquote>
+             <ul>
+              <li>自动生成每个操作步骤的对应UI界面。</li>
+              <li>程序入口界面，用户可以勾选默认的UI界面</li>
+              <li>也可以不勾选，使用自己的UI界面作为入口，这样需要自己写几句简单代码</li>
             </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+            
           </div><!-- /.blog-post -->
 
 
           <div id = "vv5"class="blog-post">
             <h2  class="blog-post-title">· 步骤介绍及音频</h2>
              
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>针对步骤的每一步演示，操作的同时，会有UI介绍及音频介绍</p>
             <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
+              <li>复制步骤介绍文字到编辑器，程序会自动载入介绍文字到UI界面</li>
+              <li>选择介绍音频，程序会在步骤开始前播放</li>
+              <li>所有音频必须在Resources文件夹下面</li>
             </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+             
           </div><!-- /.blog-post -->
 
 
           <div id = "vv6"class="blog-post">
             <h2  class="blog-post-title">· 操作对象</h2>
-             
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+             <blockquote>
+              <p><strong>每个步骤，都会有一个操作的对象</strong></p>
+            </blockquote>
+            <p>选择该对象，介绍面板UI会自动生成在该对象的轴心位置。用户需要对生成的UI进行位置调整！</p> 
           </div><!-- /.blog-post -->
 
           <div id = "vv7"class="blog-post">
             <h2  class="blog-post-title">· 触发型 动作</h2>
-             
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+             <blockquote>
+              <p><strong>手柄动作</strong></p>
+            </blockquote>
+            <p>针对每一步，都会设定VR操作的动作，一旦手柄执行相关动作，当前步骤就被激活！</p>
             <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+              <li>手柄扳机键按下、抬起操作等</li>
+              <li>手柄触摸键按下、抬起操作等</li>
+              <li>手柄其他键按下、抬起操作等</li>
+            </ul> 
           </div><!-- /.blog-post -->
 
-          <div id = "vv8"class="blog-post">
-            <h2  class="blog-post-title">· 跟随型 动作</h2>
-             
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-          </div><!-- /.blog-post -->
+         
 
           <div id = "vv9"class="blog-post">
             <h2  class="blog-post-title">· 动作激活时间</h2>
-             
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+             <blockquote>
+              <p><strong>手柄在正确的操作对象上的稳定时间</strong></p>
+            </blockquote>
+            <p>每一步开始前，手柄上的状态UI会显示，对象操作正确UI会被激活并蓝色扩展，对象操作错误会红色显示。如果操作正确，蓝色扩展变大至满格即是稳定时间，然后触发动作即激活当前步骤！</p>
             <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
+              <li>选择正确的操作对象</li>
+              <li>等待蓝色能量圈满格</li>
+              <li>激活动作</li>
+              <li>步骤被激活</li>
             </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+            
           </div><!-- /.blog-post -->
 
 
           <div id = "vv10"class="blog-post">
             <h2  class="blog-post-title">· 操作工具选择</h2>
-             
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+             <blockquote>
+              <p><strong>某些步骤需要工具</strong></p>
+            </blockquote>
+            <p>某些步骤使用默认手柄即可，但是某些步骤可能需要特殊工具，涉及到切换手柄问题。需要在菜单“扩展-工具设置-设置面板”中设置</p>
             <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
+              <li>编辑好工具模型并加入HTC_LeftCollider、或者HTC_RightCollider脚本，指定工具的碰撞体参数</li>
+              <li>将编辑的预制体(*.Prefab)拖入到Project文件夹里面</li>
+              <li>打开工具设置面板，点击“+”添加一个新工具</li>
+              <li>输入工具名称，拖拽编辑好的预制体(*.Prefab)</li>
+              <li>步骤编辑时，需要工具的话，选择工具即可！</li>
             </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+            <p> <em>注意：一定要在工具模型上加入对应的脚本，哪只手是工具，就加入哪只手的脚本。HTC_LeftCollider或者HTC_RightCollider</em> </p>
+            
           </div><!-- /.blog-post -->
-
-          <div id = "vv11"class="blog-post">
-            <h2  class="blog-post-title">· 工具使用时间</h2>
-             
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-          </div><!-- /.blog-post -->
+ 
 
           <div id = "vv12"class="blog-post">
-            <h2  class="blog-post-title">· 开始事件及结束事件</h2>
-             
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-          </div><!-- /.blog-post -->
-
-          <div id = "vv13"class="blog-post">
-            <h2  class="blog-post-title">· 中断流程</h2>
-             
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-          </div><!-- /.blog-post -->
-
-          <div id = "vv14"class="blog-post">
-            <h2  class="blog-post-title">· 中断事件</h2>
-             
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-          </div><!-- /.blog-post -->
-
-          <div id = "vv15"class="blog-post">
-            <h2  class="blog-post-title">· 自定义脚本</h2>
-             
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-          </div><!-- /.blog-post -->
+            <h2  class="blog-post-title">· 开始事件</h2>
+             <blockquote>
+              <p><strong>步骤被激活后，会有一些事件发生</strong></p>
+            </blockquote>
+            <p>步骤被激活了，肯定会有事件发生，比如声音响起、某些物体移动、某些物体旋转等</p>
+            <p>通过添加对应的事件即可</p>
+            <p><em>添加的事件，一定记得要设定事件物体。音频的话记得选择的音频需要Resources文件夹中</em> </p>
+            
+          </div><!-- /.blog-post -->      
+          
         </div><!-- /.blog-main -->
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
         
-        <div class="sidebar-module sidebar-module-inset">
-            <h4 style="color: blue;"><b>支付宝打赏</b></h4>
-             
-            <img src="assets/img/count.jpg" alt="">
-             
-             <p> <em>if you like this .....please take your phone...</em>  </p>
-          </div>
+          <div class="sidebar-module sidebar-module-inset">
+            <h4 style="color:blue;"><b>技术交流</b></h4>             
+            <img src="assets/img/qq.png" alt="">             
+             <!--<p> <em>if you like this .....please take your phone...</em>  </p>-->
+          </div> 
 
           <div class="sidebar-module">
             <h4><b>操作文档</b></h4>
             <ol class="list-unstyled">
+              <li><a href="#"><br></a></li> 
               <li><a href="#vv1">· 新建、打开</a></li>
               <li><a href="#vv2">· 多个子流程</a></li>
               <li><a href="#vv3">· 操作平台</a></li> 
@@ -334,24 +245,19 @@
               <li><a href="#vv6">· 操作对象</a></li> 
               <li><a href="#"><br></a></li> 
               <li><a href="#vv7">· 触发型 动作</a></li> 
-              <li><a href="#vv8">· 跟随型 动作</a></li> 
               <li><a href="#vv9">· 动作激活时间</a></li> 
               <li><a href="#"><br></a></li> 
               <li><a href="#vv10">· 操作工具选择</a></li> 
               <li><a href="#vv11">· 工具使用时间</a></li> 
               <li><a href="#"><br></a></li> 
-              <li><a href="#vv12">· 开始事件及结束事件</a></li> 
-              <li><a href="#"><br></a></li> 
-              <li><a href="#vv13">· 中断流程</a></li> 
-              <li><a href="#vv14">· 中断事件</a></li> 
-              <li><a href="#"><br></a></li> 
-              <li><a href="#vv15">· 自定义脚本</a></li> 
-               
+              <li><a href="#vv12">· 开始事件</a></li> 
+               <li><a href="#"><br></a></li> 
             </ol>
           </div>
           <div class="sidebar-module">
             <h4><b>视频观看</b></h4>
             <ol class="list-unstyled">
+                <li><a href="#"><br></a></li> 
               <li><a href="#">· Youku</a></li> 
             </ol>
           </div>
@@ -365,9 +271,8 @@
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">顶部</a></p>
-       <!--  <p>&copy; vvpsteam 2016 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
-        <p>&copy; vvpsteam 2017 </p>
+        <p class="pull-right"><a href="#">顶部</a></p> 
+        <p>&copy; Li Bin 2017 </p>
       </footer>
 
     </div><!-- /.container -->
